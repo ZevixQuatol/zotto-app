@@ -1,22 +1,7 @@
-import App from './App'
+import {
+	createApp
+} from 'vue'
 
-// #ifndef VUE3
-import Vue from 'vue'
-import './uni.promisify.adaptor'
-Vue.config.productionTip = false
-App.mpType = 'app'
-const app = new Vue({
-  ...App
-})
-app.$mount()
-// #endif
+import App from './App.vue';
 
-// #ifdef VUE3
-import { createSSRApp } from 'vue'
-export function createApp() {
-  const app = createSSRApp(App)
-  return {
-    app
-  }
-}
-// #endif
+const app = createApp(App).mount('#app');

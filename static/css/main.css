@@ -1,0 +1,58 @@
+:root {
+	--primary-100: #1F3A5F;
+	--primary-200: #4d648d;
+	--primary-300: #acc2ef;
+	--accent-100: #3D5A80;
+	--accent-200: #cee8ff;
+	--text-100: #FFFFFF;
+	--text-200: #e0e0e0;
+	--bg-100: #0F1C2E;
+	--bg-200: #1f2b3e;
+	--bg-300: #374357;
+}
+
+html,
+body {
+	background-color: var(--primary-100);
+	color: var(--text-100);
+}
+
+.index-view {
+	height: 90vh;
+	width: 100vw;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	gap: 2rem;
+
+
+}
+
+.index-card {
+	height: 10rem;
+	width: 16rem;
+
+	background-color: var(--primary-200);
+	border-radius: 20rpx;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: .5rem;
+
+}
+
+.index-card-title {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.index-card:active {
+	background-color: var(--bg-100);
+	color: var(--text-200);
+	transform: scale(0.9);
+}
