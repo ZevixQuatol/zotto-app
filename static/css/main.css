@@ -13,46 +13,144 @@
 
 html,
 body {
-	background-color: var(--primary-100);
+	background-color: var(--bg-100);
 	color: var(--text-100);
 }
 
+.flex,
+.flex-column,
+.flex-row-center,
+.flex-col-center {
+	display: flex;
+}
+
+.flex-column,
+.flex-col-center {
+	flex-direction: column;
+}
+
+
+.align-center,
+.flex-row-center,
+.flex-col-center {
+	align-items: center;
+}
+
+.justify-center,
+.flex-row-center,
+.flex-col-center {
+	justify-content: center;
+}
+
 .index-view {
-	height: 90vh;
+	height: 80vh;
 	width: 100vw;
 
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: start;
 	justify-content: center;
 
-	gap: 2rem;
+	overflow-y: scroll;
 
+	gap: 5rem;
+	margin-top: 10vh;
 
 }
 
 .index-card {
-	height: 10rem;
+	min-height: 3rem;
 	width: 16rem;
-
-	background-color: var(--primary-200);
+	background-color: var(--bg-200);
 	border-radius: 20rpx;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	padding: 1rem;
 
 	gap: .5rem;
 
 }
 
-.index-card-title {
-	font-size: 2rem;
-	font-weight: 600;
+.index-card-head {
+	height: 2rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-.index-card:active {
-	background-color: var(--bg-100);
+.index-card-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: .1rem;
+}
+
+.index-card-content {
+	/* position: relative; */
+	margin-top: 1rem;
+	/* height: 7rem; */
 	color: var(--text-200);
-	transform: scale(0.9);
+	border-top: 1px solid var(--bg-300);
+	font-size: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.draw-num {
+	font-size: 1.5rem;
+	height: 5rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.font-num,
+.back-num {
+	/* background-color: var(--bg-300); */
+	padding: .5rem;
+	border-radius: 20rpx;
+	width: auto;
+}
+
+.font-num {
+	color: #de283b;
+}
+
+.back-num {
+	color: #25b1bf;
+}
+
+.draw-date {
+	font-size: 0.8rem;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.z-btn {
+	/* background-color: var(--bg-300); */
+	padding: .5rem;
+	border-radius: 20rpx;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: btnMove linear 5s infinite;
+}
+
+@keyframes btnMove {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+
 }
